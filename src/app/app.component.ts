@@ -5,7 +5,7 @@
  * distributed to other students.
  *
  * Name: Theo Rusu Student ID: 101613206 Date: March 26, 2022
- *
+ * Heroku Link: https://angular-blog-app.herokuapp.com/home
  ********************************************************************************/
 import { Component } from '@angular/core';
 
