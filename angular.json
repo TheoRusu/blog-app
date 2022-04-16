@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bti425-a3-theorusu": {
+    "bti425-a4-theorusu": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
@@ -41,18 +41,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/bti425-a3-theorusu",
+            "outputPath": "dist/bti425-a4-theorusu",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -92,10 +87,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "bti425-a3-theorusu:build:production"
+              "browserTarget": "bti425-a4-theorusu:build:production"
             },
             "development": {
-              "browserTarget": "bti425-a3-theorusu:build:development"
+              "browserTarget": "bti425-a4-theorusu:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -103,7 +98,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "bti425-a3-theorusu:build"
+            "browserTarget": "bti425-a4-theorusu:build"
           }
         },
         "test": {
@@ -113,18 +108,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css"],
             "scripts": []
           }
         }
       }
     }
   },
-  "defaultProject": "bti425-a3-theorusu"
+  "defaultProject": "bti425-a4-theorusu"
 }

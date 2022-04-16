@@ -1,11 +1,11 @@
 /*********************************************************************************
- * BTI425 – Assignment 03
+ * BTI425 – Assignment 04
  * I declare that this assignment is my own work in accordance with Seneca Academic Policy. No part of this
  * assignment has been copied manually or electronically from any other source (including web sites) or
  * distributed to other students.
  *
  * Name: Theo Rusu Student ID: 101613206 Date: March 26, 2022
- * Heroku Link: https://angular-blog-app.herokuapp.com/home
+ * Heroku Link: https://blog-app-theorusu.herokuapp.com/home
  ********************************************************************************/
 import { Component } from '@angular/core';
 
@@ -15,5 +15,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'bti425-a3-theorusu';
+  title = 'bti425-a4-theorusu';
 }
