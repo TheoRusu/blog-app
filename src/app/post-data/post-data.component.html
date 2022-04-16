@@ -13,14 +13,15 @@
                 <div class="title"><span>{{post.postedBy}}</span></div>
             </a>
             <div class="d-flex align-items-center flex-wrap">
-                <div class="date"><i class="icon-clock"></i>{{post.postDate}}</div>
+                <div class="date"><i class="icon-clock"></i>{{post.postDate | date:'mediumDate'}}</div>
                 <div class="views"><i class="icon-eye"></i>{{post.views}}</div>
                 <div class="comments meta-last"><i class="icon-comment"></i>{{post.comments.length}}</div>
             </div>
         </div>
         <div class="post-body" [innerHtml]="post.post">
         </div>
-        <div class="post-tags"><a routerLink class="tag" *ngFor="let tag of post.tags">{{tag}}</a></div>
+        <div class="post-tags"><a [routerLink]="['/blog']" [queryParams]="{ tag: tag.substring(1) }" class="tag"
+                *ngFor="let tag of post.tags">{{tag}}</a></div>
         <div class="post-comments">
             <header>
                 <h3 class="h6">Post Comments<span class="no-of-comments">{{post.comments.length}}</span></h3>
@@ -30,7 +31,8 @@
                     <div class="user d-flex align-items-center">
                         <div class="image"><img src="/assets/img/user.svg" alt="..." class="img-fluid rounded-circle">
                         </div>
-                        <div class="title"><strong>{{comment.author}}</strong><span class="date">{{comment.date}}</span>
+                        <div class="title"><strong>{{comment.author}}</strong><span class="date">{{comment.date |
+                                date:'mediumDate'}}</span>
                         </div>
                     </div>
                 </div>
@@ -41,14 +43,15 @@
                 <header>
                     <h3 class="h6">Leave a reply</h3>
                 </header>
-                <form action="#" class="commenting-form">
+                <form (ngSubmit)="submitComment()" class="commenting-form">
                     <div class="row">
                         <div class="form-group col-md-12">
-                            <input type="text" name="username" id="username" placeholder="Name" class="form-control">
+                            <input type="text" name="username" id="username" placeholder="Name" class="form-control"
+                                [(ngModel)]="commentName">
                         </div>
                         <div class="form-group col-md-12">
                             <textarea name="usercomment" id="usercomment" placeholder="Type your comment"
-                                class="form-control"></textarea>
+                                class="form-control" [(ngModel)]="commentText"></textarea>
                         </div>
                         <div class="form-group col-md-12">
                             <button type="submit" class="btn btn-secondary">Submit Comment</button>
