@@ -4,7 +4,7 @@
  * assignment has been copied manually or electronically from any other source (including web sites) or
  * distributed to other students.
  *
- * Name: Theo Rusu Student ID: 101613206 Date: March 26, 2022
+ * Name: Theo Rusu Student ID: 101613206 Date: April 15, 2022
  * Heroku Link: https://blog-app-theorusu.herokuapp.com/home
  ********************************************************************************/
 import { Component } from '@angular/core';
